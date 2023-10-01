@@ -1,0 +1,55 @@
+<h2
+    mat-dialog-title
+    class="mb-4"
+>
+    List products
+</h2>
+<mat-dialog-content class="mat-typography">
+
+    <div class="content__dialog">
+        <div class="t__body">
+            <div *ngFor="let product of data">
+                <div
+                    class="text-black sec1"
+                    [ngClass]="product.state?'text-decoration-line-through':''"
+                >
+                    {{ product.ammount  }}
+                </div>
+                <div
+                    class="text-black ml-t sec2"
+                    [ngClass]="product.state?'text-decoration-line-through':''"
+                >
+                    {{ product.product.description + product.product.emoji}}
+                </div>
+                <div class="text-black ml-t sec3">
+                    {{ product.state?"Complete":"Pending" }}
+                </div>
+                <div class="text-black ml-t sec3">
+                    <mat-slide-toggle
+                        [checked]="product.state"
+                        (click)="changeState(product.id)"
+                    ></mat-slide-toggle>
+                </div>
+                <div class="text-black ml-t sec4">
+                    <span
+                        (click)="deleteProduct(product.id)"
+                        role="button"
+                    >
+                        ❌
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button
+        mat-flat-button
+        color="warn"
+        mat-dialog-close
+    >
+        Cancel
+    </button>
+
+</mat-dialog-actions>

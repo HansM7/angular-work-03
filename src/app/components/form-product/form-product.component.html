@@ -1,0 +1,76 @@
+<div>
+    <form
+        class="d-flex flex-column"
+        [formGroup]="productForm"
+        (ngSubmit)="onSubmit()"
+    >
+        <div class="row mb-4">
+            <mat-form-field>
+                <mat-label>Description</mat-label>
+                <input
+                    formControlName="description"
+                    type="description"
+                    matInput
+                    [matAutocomplete]="auto"
+                    (input)="filterSuggestions($event)"
+                >
+                <mat-hint *ngIf="productForm.controls['description'].hasError('invalidProduct')">Product invalid!</mat-hint>
+                <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+            </mat-form-field>
+
+        </div>
+
+        <div class="row mb-4">
+            <mat-form-field>
+                <mat-label>Ammount</mat-label>
+                <input
+                    formControlName="ammount"
+                    name="ammount"
+                    type="number"
+                    matInput
+                >
+                <mat-hint
+                    *ngIf="getErrorControl('ammount').errors?.['max']"
+                    class="text-danger"
+                >
+                    The number max is 10
+                </mat-hint>
+                <!-- <mat-hint>Errors appear instantly!</mat-hint> -->
+            </mat-form-field>
+        </div>
+
+        <div class="mt-4">
+            <button
+                type="submit"
+                mat-raised-button
+                color="primary"
+                mat-button
+            >
+                Save product
+            </button>
+
+            <button
+                type="button"
+                class="ms-4"
+                mat-raised-button
+                color="accent"
+                (click)="openDialog()"
+                matBadge="{{cartShopping.length}}"
+                matBadgeColor="warn"
+            >
+                List
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+
+        </div>
+
+    </form>
+    <mat-autocomplete #auto="matAutocomplete">
+        <mat-option
+            *ngFor="let suggestion of productSugestions"
+            [value]="suggestion.description"
+        >
+            {{ suggestion.description + suggestion.emoji}}
+        </mat-option>
+    </mat-autocomplete>
+</div>
