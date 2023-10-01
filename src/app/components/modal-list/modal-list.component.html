@@ -27,12 +27,12 @@
                 <div class="text-black ml-t sec3">
                     <mat-slide-toggle
                         [checked]="product.state"
-                        (click)="changeState(product.$id)"
+                        (click)="changeState(product.cart_id)"
                     ></mat-slide-toggle>
                 </div>
                 <div class="text-black ml-t sec4">
                     <span
-                        (click)="deleteProduct(product.$id)"
+                        (click)="deleteProduct(product.cart_id)"
                         role="button"
                     >
                         ❌

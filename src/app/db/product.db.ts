@@ -2,102 +2,102 @@ import { IProduct } from "../interfaces/product.interface";
 
 export const products: IProduct[] = [
     {
-        id: 1,
+        product_id: 1,
         description: 'Apple',
         emoji: '🍎',
     },
     {
-        id: 2,
+        product_id: 2,
         description: 'Banana',
         emoji: '🍌',
     },
     {
-        id: 3,
+        product_id: 3,
         description: 'Cherry',
         emoji: '🍒',
     },
     {
-        id: 4,
+        product_id: 4,
         description: 'Grapes',
         emoji: '🍇',
     },
     {
-        id: 5,
+        product_id: 5,
         description: 'Kiwi',
         emoji: '🥝',
     },
     {
-        id: 6,
+        product_id: 6,
         description: 'Lemon',
         emoji: '🍋',
     },
     {
-        id: 7,
+        product_id: 7,
         description: 'Mango',
         emoji: '🥭',
     },
     {
-        id: 8,
+        product_id: 8,
         description: 'Orange',
         emoji: '🍊',
     },
     {
-        id: 9,
+        product_id: 9,
         description: 'Peach',
         emoji: '🍑',
     },
     {
-        id: 10,
+        product_id: 10,
         description: 'Pear',
         emoji: '🍐',
     },
     {
-        id: 11,
+        product_id: 11,
         description: 'Pineapple',
         emoji: '🍍',
     },
     {
-        id: 12,
+        product_id: 12,
         description: 'Plum',
         emoji: '🍑',
     },
     {
-        id: 13,
+        product_id: 13,
         description: 'Raspberry',
         emoji: '🍓',
     },
     {
-        id: 14,
+        product_id: 14,
         description: 'Strawberry',
         emoji: '🍓',
     },
     {
-        id: 15,
+        product_id: 15,
         description: 'Watermelon',
         emoji: '🍉',
     },
     {
-        id: 16,
+        product_id: 16,
         description: 'Blueberry',
         emoji: '🫐',
     },
     {
-        id: 17,
+        product_id: 17,
         description: 'Blackberry',
         emoji: '🫐',
     },
     {
-        id: 18,
+        product_id: 18,
         description: 'Cantaloupe',
         emoji: '🍈',
     },
     {
-        id: 19,
+        product_id: 19,
         description: 'Honeydew',
         emoji: '🍈',
     },
     {
-        id: 20,
+        product_id: 20,
         description: 'Coconut',
         emoji: '🥥',
     }

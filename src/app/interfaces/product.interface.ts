@@ -1,11 +1,11 @@
 export interface IProduct {
-    id: number,
+    product_id: number,
     description: string,
     emoji: string,
 }
 
 export interface IStore {
-    id: number,
+    cart_id: number,
     product: IProduct,
     ammount: number,
     state: boolean

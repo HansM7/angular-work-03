@@ -56,14 +56,14 @@ export class FormProductComponent {
 
 	onSubmit(): void {
 		if (!this.productForm.invalid) {
-			const $id = this.dataFakeService.cartShopping.length + 1;
+			const cart_id = this.dataFakeService.cartShopping.length + 1;
 			const product = this.dataFakeService.products.find(product => product.description === this.productForm.value['description'])
 			const ammount = this.productForm.value['ammount'];
 			const state = false;
 			if (!product) {
 				this.openSnackBar("Product not found!")
 			} else {
-				this.dataFakeService.addProductToCart({ $id, product, ammount, state })
+				this.dataFakeService.addProductToCart({ cart_id, product, ammount, state })
 				this.openSnackBar("Register correct!")
 			}
 		} else {

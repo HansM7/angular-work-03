@@ -23,14 +23,14 @@ export class DataFakeService {
 
 	changeStateToCart(id: number): void {
 		this.cartShopping.forEach(item => {
-			if (item.$id === id) {
+			if (item.cart_id === id) {
 				item.state = !item.state;
 			}
 		});
 	}
 
 	deleteProductToCart(id: number): void {
-		const index = this.cartShopping.findIndex(item => item.$id === id);
+		const index = this.cartShopping.findIndex(item => item.cart_id === id);
 		if (index !== -1) {
 			this.cartShopping.splice(index, 1);
 		}
